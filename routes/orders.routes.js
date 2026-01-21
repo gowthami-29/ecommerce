@@ -7,8 +7,6 @@ const DB_PATH = "./db.json";
 const readDB = () => JSON.parse(fs.readFileSync(DB_PATH, "utf-8"));
 const writeDB = (data) =>
   fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2));
-
-// CREATE ORDER
 router.post("/", (req, res) => {
   const { productId, quantity } = req.body;
   const db = readDB();
@@ -38,13 +36,11 @@ router.post("/", (req, res) => {
   res.status(201).json(order);
 });
 
-// GET ALL ORDERS
 router.get("/", (req, res) => {
   const db = readDB();
   res.json(db.orders);
 });
 
-// CANCEL ORDER (SOFT DELETE)
 router.delete("/:orderId", (req, res) => {
   const db = readDB();
   const order = db.orders.find(o => o.id === Number(req.params.orderId));
@@ -68,7 +64,6 @@ router.delete("/:orderId", (req, res) => {
   res.json(order);
 });
 
-// CHANGE STATUS
 router.patch("/change-status/:orderId", (req, res) => {
   const { status } = req.body;
   const db = readDB();
