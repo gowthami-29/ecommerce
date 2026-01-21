@@ -1,0 +1,24 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gowthami-29/ecommerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gowthami-29/ecommerce/issues"
+  },
+  "homepage": "https://github.com/gowthami-29/ecommerce#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
